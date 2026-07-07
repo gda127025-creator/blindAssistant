@@ -129,6 +129,49 @@ valor total y moneda.
     return {
         "result": texto
     }
+
+# =====================================================
+# RECONOCER OBJETOS
+# =====================================================
+
+@app.post("/object")
+
+def money(data: ImageRequest):
+
+    prompt = """
+Describe solamente el objeto que se encuentra en la imagen en primer plano.
+Usa máximo 50 palabras
+"""
+
+    texto = analizar(
+        data.image,
+        prompt
+    )
+
+    return {
+        "result": texto
+    }
+
+# =====================================================
+# CLIMA
+# =====================================================
+
+@app.post("/weather")
+
+def money(data: ImageRequest):
+
+    prompt = """
+indica la fecha y hora. Menciona las condiciones metereológicas actuales y el pronóstico del clima.
+"""
+
+    texto = analizar(
+        data.image,
+        prompt
+    )
+
+    return {
+        "result": texto
+    }
     
 # =====================================================
 # FRONTEND
