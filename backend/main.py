@@ -136,7 +136,7 @@ valor total y moneda.
 
 @app.post("/object")
 
-def money(data: ImageRequest):
+def object(data: ImageRequest):
 
     prompt = """
 Describe solamente el objeto que se encuentra en la imagen en primer plano.
@@ -158,7 +158,7 @@ Usa máximo 50 palabras
 
 @app.post("/weather")
 
-def money(data: ImageRequest):
+def weather(data: ImageRequest):
 
     prompt = """
 indica la fecha y hora. Menciona las condiciones metereológicas actuales y el pronóstico del clima.
