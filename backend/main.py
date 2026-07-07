@@ -89,11 +89,11 @@ Prioriza seguridad.
 def ocr(data: ImageRequest):
 
     prompt = """
-Lee todo el texto visible.
+Lee todo el texto visible, evitando texto de fondo 
 
 Incluye etiquetas.
 
-Máximo 50 palabras.
+Máximo 50 palabras. Si el texto(etiqueta, lectura, instrucción) excede el límite de palabras realizar un resumen, manteniendo la estructura de su texto, sin nigún cambio en su definición inicial.
 """
 
     texto = analizar(
