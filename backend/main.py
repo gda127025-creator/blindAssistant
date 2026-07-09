@@ -161,7 +161,7 @@ Usa máximo 50 palabras
 def weather(data: ImageRequest):
 
     prompt = """
-indica la fecha y hora. Menciona las condiciones metereológicas actuales y el pronóstico del clima.
+indica la fecha y hora. Menciona las condiciones metereológicas actuales y el pronóstico del clima, pero no te bases en fotos tomadas sino en info directamente del internt en tiempo envivo.
 """
 
     texto = analizar(
